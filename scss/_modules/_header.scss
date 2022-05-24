@@ -1,0 +1,221 @@
+@import 'mixin';
+
+header {
+    background-color: #cccccc;
+    height: 100vh;
+    width: 100%;
+    margin: auto;
+
+    @include d-flex(row, space-around, center);
+
+    .header__color--options {
+        @include d-flex(column, space-between, center);
+        height: 600px;
+        width: 100px;
+
+        .flecha__arriba {
+            width: 25px;
+            height: auto;            
+        }
+
+        .flecha__abajo {
+            @extend .flecha__arriba;
+        }
+
+    }
+
+    .header__product--img {
+
+        img {
+            height: 50rem;
+            width: 25rem;
+            left: 250px;
+            top: 153px;
+            border-radius: 0px;
+        }
+
+    }
+
+    .header__product--detail {
+        height: 50rem;
+        width: auto;
+        margin-right: 5rem;
+
+        h1 {
+            font-family: Oswald;
+            font-size: 64px;
+            font-weight: 400;
+            line-height: 64px;
+            letter-spacing: -0.04em;
+            text-align: left;
+            margin-bottom: 1rem;
+        }
+
+        .product--rating {
+            margin: 1rem 0 0 0;
+
+            .material-symbols-outlined {
+                color: #fff;
+
+                &:hover {
+                    color: #FC3B1D;
+                }
+            }
+        }
+
+
+
+        .product__price {
+            @include d-flex(row, space-between, center);
+            padding: 1rem 0 2rem 0;
+            border-bottom: solid .5px rgba(65, 65, 65, 0.33);
+
+            .price {
+                @include helimix--regular(Oswald, 40px, 400, 40px);
+            }
+
+            .shipping {
+                align-self: flex-end;
+                font-family: Roboto;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 16px;
+                letter-spacing: -0.02em;
+                text-align: left;
+
+            }
+        }
+
+        .product__color--select {
+            @include d-flex(column, start, start);
+            margin: 2rem 0 1rem 0;
+
+
+            .color--select--title {
+                font-family: roboto;
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 20px;
+                letter-spacing: 00.02em;
+            }
+
+            .color--options {
+                margin-top: 1rem;
+                width: 450px;
+                @include d-flex(row, space-between, center);
+                padding-bottom: 2rem;
+                border-bottom: solid .5px rgba(65, 65, 65, 0.33);
+
+            }
+        }
+
+        .product__size--select {
+            padding: 1rem 0 1rem 0;
+            @include d-flex(row, space-between, center);
+
+            .size--select--title {
+                font-family: roboto;
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 20px;
+                letter-spacing: 00.02em;
+            }
+
+            .size--btns {
+                button {
+                    font-family: roboto;
+                    font-size: 16px;
+                    font-weight: 550;
+                    line-height: 16px;
+                    letter-spacing: -0.02em;
+                    text-align: left;
+                    padding: 10px;
+                    background-color: transparent;
+                    border: solid 1px #000;
+
+                    &:hover{
+                        background-color: #000;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+
+        .btn__buy{
+            button{
+                border: 0;
+                width: 100%;
+                height: 50px;
+                background-color: #FC3B1D;
+                color: #fff;
+                font-family: Oswald;
+                font-size: 20px;
+                font-weight: 600;
+                line-height: 20px;
+                letter-spacing: 0.02em;
+                text-align: center;
+            }
+
+            .installments{
+                padding: 1rem 0 1rem 0;
+                @include d-flex(row,space-between,center);
+                border-bottom:solid .5px rgba(65, 65, 65, 0.33);
+
+                &__text{
+                    font-family: 'Roboto';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 150%;
+                }
+            }
+        }
+
+        .product__freeShiping{
+            @include d-flex(row, space-between,center);
+            padding-top: 1rem;
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+            margin: auto;
+            height: 150px;
+
+            .shipping--US--Canada{
+                @include d-flex(row, space-between,center);
+                width: 70%;
+
+                .freeShipping{
+                    @include d-flex (column, start,start);
+                    width: 70%;
+                    padding-right: 1rem;
+
+                    .shipping--Internationally--text{
+                        color: #FC3B1D;
+                    }
+                    
+                    
+                }
+            }
+
+            .offer{
+                @include d-flex (row, space-between,center);
+                width: 70%;
+                padding-left: 1rem;
+
+                p{
+                    width: 70%;
+                }
+            }
+        }
+
+
+
+
+
+
+
+
+    }
+}

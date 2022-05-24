@@ -14,6 +14,7 @@ header {
         @include d-flex(column, space-between, center);
         height: 800px;
         width: 120px;
+        margin-left: 5rem;
 
         img{
             width: 70px;
@@ -31,21 +32,42 @@ header {
     }
 
     .header__product--img {
+        width: 30%;
+        overflow: hidden;
 
-        img {
-            height: 60rem;
-            width: 35rem;
-            left: 250px;
-            top: 153px;
-            border-radius: 0px;
-        }
+        .carrousel{
+            width: 600%;
+            @include d-flex(row,flex-start,center);
+            flex-wrap: nowrap;
+
+            transition: all .5s ease;
+            transform: translateX(0%);
+
+            .carrousel--item{
+                height: 500px;
+                width: calc(100% / 6);
+                border-radius: 0px;
+
+                &.sizeA{
+                    height: 500px;
+                }
+
+                &.sizeB{
+                    height: 800px;
+                }
+
+                &.sizeC{
+                    height: 1000px;
+                }
+            }
+        }        
 
     }
 
     .header__product--detail {
         height: 50rem;
         width: auto;
-        margin-right: 5rem;
+        margin-right: 12rem;
 
         h1 {
             font-family: Oswald;
@@ -111,6 +133,17 @@ header {
                 @include d-flex(row, space-between, center);
                 padding-bottom: 2rem;
                 border-bottom: $separate-line;
+
+                button{
+                    border: .3px solid #000;
+                    border-radius: 10px;
+
+                    &.active{
+                        border: solid 2px;
+                        border-color: #FC3B1D;
+                    }
+
+                }
 
             }
         }

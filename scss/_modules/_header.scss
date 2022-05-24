@@ -1,8 +1,10 @@
+$separate-line: solid .5px rgba(65, 65, 65, 0.33);
+
 @import 'mixin';
 
 header {
     background-color: #cccccc;
-    height: 100vh;
+    height: 119vh;
     width: 100%;
     margin: auto;
 
@@ -10,8 +12,12 @@ header {
 
     .header__color--options {
         @include d-flex(column, space-between, center);
-        height: 600px;
-        width: 100px;
+        height: 800px;
+        width: 120px;
+
+        img{
+            width: 70px;
+        }
 
         .flecha__arriba {
             width: 25px;
@@ -27,8 +33,8 @@ header {
     .header__product--img {
 
         img {
-            height: 50rem;
-            width: 25rem;
+            height: 60rem;
+            width: 35rem;
             left: 250px;
             top: 153px;
             border-radius: 0px;
@@ -68,7 +74,7 @@ header {
         .product__price {
             @include d-flex(row, space-between, center);
             padding: 1rem 0 2rem 0;
-            border-bottom: solid .5px rgba(65, 65, 65, 0.33);
+            border-bottom: $separate-line;
 
             .price {
                 @include helimix--regular(Oswald, 40px, 400, 40px);
@@ -104,7 +110,7 @@ header {
                 width: 450px;
                 @include d-flex(row, space-between, center);
                 padding-bottom: 2rem;
-                border-bottom: solid .5px rgba(65, 65, 65, 0.33);
+                border-bottom: $separate-line;
 
             }
         }
@@ -159,7 +165,7 @@ header {
             .installments{
                 padding: 1rem 0 1rem 0;
                 @include d-flex(row,space-between,center);
-                border-bottom:solid .5px rgba(65, 65, 65, 0.33);
+                border-bottom:$separate-line;
 
                 &__text{
                     font-family: 'Roboto';
@@ -209,6 +215,38 @@ header {
                 }
             }
         }
+
+        .details--summary{
+            max-width: 550px;
+            P{
+                font-family: "Roboto";
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 150%;
+
+                padding: 1rem 0 1rem 0;
+            }
+            summary{
+                @include d-flex(row,space-between,center);
+
+                padding: 1rem 0 1rem 0;
+                border-top:$separate-line;
+
+                font-family: 'Oswald';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 32px;
+                line-height: 100%;
+
+                img{
+                    width: 25px;
+                }
+            }
+            
+        }
+        
+        
 
 
 

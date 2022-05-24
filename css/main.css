@@ -74,7 +74,7 @@
 
 header {
   background-color: #cccccc;
-  height: 100vh;
+  height: 119vh;
   width: 100%;
   margin: auto;
   display: flex;
@@ -87,16 +87,19 @@ header .header__color--options {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 600px;
-  width: 100px;
+  height: 800px;
+  width: 120px;
+}
+header .header__color--options img {
+  width: 70px;
 }
 header .header__color--options .flecha__arriba, header .header__color--options .flecha__abajo {
   width: 25px;
   height: auto;
 }
 header .header__product--img img {
-  height: 50rem;
-  width: 25rem;
+  height: 60rem;
+  width: 35rem;
   left: 250px;
   top: 153px;
   border-radius: 0px;
@@ -272,6 +275,33 @@ header .header__product--detail .product__freeShiping .offer {
 }
 header .header__product--detail .product__freeShiping .offer p {
   width: 70%;
+}
+header .header__product--detail .details--summary {
+  max-width: 550px;
+}
+header .header__product--detail .details--summary P {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  padding: 1rem 0 1rem 0;
+}
+header .header__product--detail .details--summary summary {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0 1rem 0;
+  border-top: solid 0.5px rgba(65, 65, 65, 0.33);
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 100%;
+}
+header .header__product--detail .details--summary summary img {
+  width: 25px;
 }
 
 .colorLightBlue {
